@@ -1,17 +1,5 @@
 def encrypt(plaintext, key="SAY"):
-    """
-    使用多层加密算法生成设备激活码
-    
-    Args:
-        plaintext (str): 要加密的设备ID
-        key (str): 加密密钥，默认为"SAY"
-    
-    Returns:
-        str: 加密后的十六进制激活码
-    
-    Raises:
-        ValueError: 当输入参数无效时
-    """
+
     if not plaintext or not isinstance(plaintext, str):
         raise ValueError("设备ID不能为空且必须是字符串")
     
@@ -40,7 +28,7 @@ def encrypt(plaintext, key="SAY"):
 
 
 def main():
-    """主程序入口"""
+
     try:
         device_id = input("请输入设备ID: ").strip()
         
